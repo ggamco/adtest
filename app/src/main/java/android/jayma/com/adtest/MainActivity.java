@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("uid");
 
-        myRef.setValue();
-
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
